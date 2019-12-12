@@ -1,0 +1,1 @@
+{"errors":[{"message":"Cannot query field \"opis\" on type \"Osoby\".\nCannot query field \"zdjecie\" on type \"Osoby\".","locations":[{"line":3,"column":5}],"path":["persons","osobies"]}],"data":null}
