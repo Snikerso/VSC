@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import { StaticQuery } from "gatsby"
-
+import { MdLanguage } from 'react-icons/md'
 
 const Osoby = () => (
   <StaticQuery
@@ -11,8 +11,8 @@ const Osoby = () => (
         osobies {
           id
           name
-          opis
-          zdjecie {
+          description
+          photo {
             id
             url
           }
@@ -27,12 +27,12 @@ const Osoby = () => (
           return (
 
             <div className="person-container-text-img"  >
-
-              <div className="person-container-img" style={{ backgroundImage: `url(${item.zdjecie.url})` }} ></div>
+              <div className="person-container-img" style={{ backgroundImage: `url(${item.photo.url})` }} ></div>
               <div className="person-container-text">
-                <div> <b>{item.opis}</b></div>
-                <div>jdisaojdisaj odj asiojd ai jdoi ajiwdoaijwidj aod jaiw jaoi djwia jw i glr hshg lijqpo hglkw nkfj ioh oh</div>
+                <div className="person-container-head"><b>{item.name}</b></div>
+                <div>{item.description}</div>
                 <div>email: snikersdro@gmail.com</div>
+                <div ><a className="person-container-email" href="https://www.w3schools.com" target="__blank">Strona osobista: <MdLanguage /></a></div>
               </div>
 
 
@@ -41,14 +41,10 @@ const Osoby = () => (
         }
         )}
       </div>
-
     )
     }
-
   />
 )
-
-
 const OsobyPage = () => (
   <Layout>
     <div className="title-page-contener">
@@ -56,10 +52,6 @@ const OsobyPage = () => (
       <div className="title-page">OSOBY</div>
       <div className="line-right"></div>
     </div>
-
-
-
-
     <Osoby />
   </Layout>
 )

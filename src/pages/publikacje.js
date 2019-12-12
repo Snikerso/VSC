@@ -31,19 +31,15 @@ const PublicationPage = () => (
       render={({ persons: { publicationses } }) => (
         <div className="publications">
           {publicationses.map(function (item, i) {
-
             return (
               <div>
-                <div>{item.publicationContent}</div>
+                <div className="publications-item">{item.publicationContent}</div>
               </div>
             )
           })}
         </div>
-
       )}
-
     />
-
   </Layout>
 )
 

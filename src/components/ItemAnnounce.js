@@ -10,7 +10,11 @@ const ItemAnnounce = ({ item, handleText }) => {
         <>
             <div className="announce">
                 <div className="announce-card" key={item.id}>
-                    <h2>{title}</h2>
+                    <div className="announce-head-data">
+                        <h2 className="announce-head">{title}</h2>
+                        <div className="announce-data">06.12.2019</div>
+
+                    </div>
                     <div>
                         {text}
                     </div>
@@ -23,7 +27,12 @@ const ItemAnnounce = ({ item, handleText }) => {
 
                 </div>
                 <div className="more-information">
-                    {item.cos ? <div className="more-information-active">{item.title}</div> : null}
+                    {item.cos ? 
+                    <div className="more-information-active">
+                     Paweł Drojecki
+                     kom: 663406297  
+                     e-mail: snikersdro@gmail.com 
+                    </div> : null}
                 </div>
             </div>
         </>

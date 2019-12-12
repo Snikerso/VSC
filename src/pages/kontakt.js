@@ -68,11 +68,12 @@ const ContactPage = () => {
 
             <p>87-100 Toruń</p>
           </div>
+
         </div>
       </div>
       <div className="iframe">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2400.007852762975!2d18.565505215165647!3d53.02022180679041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4703344d0f37fee9%3A0x286cc8043ecc16c3!2sInterdyscyplinarne%20Centrum%20Nowoczesnych%20Technologii%20UMK%20w%20Toruniu!5e0!3m2!1sen!2spl!4v1575828457979!5m2!1sen!2spl" width="600" height="450" frameborder="0" style={{ border: 0, borderRadius: 30 }} allowfullscreen=""></iframe>
-      </div>
+       </div>
     </Layout>
   )
 }

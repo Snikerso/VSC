@@ -34,6 +34,9 @@ const Navigation = () => {
                     <Link className="nav-li" to="/ogloszenia">
                         <div className="nav-li-name">OGŁOSZENIA</div>
                     </Link>
+                    <Link className="nav-li" to="/kalendarz">
+                        <div className="nav-li-name">KALENDARZ</div>
+                    </Link>
                     <Link className="nav-li" to="/kontakt">
                         <div className="nav-li-name">KONTAKT</div>
                     </Link>

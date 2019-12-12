@@ -1,4 +1,5 @@
 module.exports = {
+
   siteMetadata: {
     title: `Visual Spatial Cognition`,
     description: `This is page about eyetracking in Toruń`,

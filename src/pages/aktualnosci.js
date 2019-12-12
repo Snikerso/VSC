@@ -6,21 +6,23 @@ const AktualnosciPage = () => {
 
   return (
     <Layout>
-      <div className="title-page-contener">
-        <div className="line-left"></div>
-        <div className="title-page">Aktualności</div>
-        <div className="line-right"></div>
-      </div>
-      <div className="news-card">
-        <h4>Tytuł dzis nauka pełni cuda</h4>
-        <div style={{ color: "blue" }}>08.12.2019</div>
-        <div className="news-text">cmad c dam ammadmdamaa mm amdmadma  ma am mammdam am,a mam  ma ma</div>
-        <div >wiecej</div>
+      
+        <div className="title-page-contener">
+          <div className="line-left"></div>
+          <div className="title-page">AKTUALNOŚCI</div>
+          <div className="line-right"></div>
+        </div>
+        <div className="news-contener">
+        <div className="news-card">
+          <h4>Tytuł aktualności dzis nauka pełni cuda</h4>
+          <div style={{ color: "#39C8DF" }}>08.12.2019</div>
+          <div style={{justifySelf: 'left'}} className="news-text">cmad c dam ammadmdamaa mm amdmadma  ma am mammdam am,a mam  ma ma</div>
+          
 
+          <div style={{ color: "blue" }} className="news-more" >Więcej</div>
 
-
-      </div>
-
+        </div>
+      </div >
 
     </Layout>
   )

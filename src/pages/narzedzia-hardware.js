@@ -9,37 +9,33 @@ const HardwarePage = () => (
       query={graphql`
     query{
       persons {
-        osobies {
-          id
-          name
-          opis
-          zdjecie {
-            id
+        hardwares {
+          description
+          descriptionMore
+          title
+          photo{
             url
           }
         }
       }
     }
     `}
-      render={({ persons: { osobies } }) => (
-        <div className="hardware">
-          {osobies.map(function (item, i) {
-            if (i % 2) {
-              return (
-                <div className="hardware-container-text-img"  >
-                  <div className="hardware-container-text">{item.opis}</div>
-                  <div className="hardware-container-img" style={{ backgroundImage: `url(${item.zdjecie.url})` }} ></div>
+      render={({ persons: { hardwares } }) => (
+        <div className="narzedzia">
+          {hardwares.map(function (item, i) {
+            return (
+              <div className="badania-contener">
+                
+                <div className="badania-text-image">
+                  <div className="badania-narzedzia-image" style={{ backgroundImage: `url(${item.photo.url})` }}></div>
+                  <div className="badania-text">
+                  <h3 className="badania-title">{item.title}</h3>
+                    {item.description}
+                    <div className="badania-more">Więcej</div>
+                  </div>
                 </div>
-              )
-            } else {
-              return (
-
-                <div className="hardware-container-text-img"  >
-                  <div className="hardware-container-img" style={{ backgroundImage: `url(${item.zdjecie.url})` }} ></div>
-                  <div className="hardware-container-text">{item.opis}</div>
-                </div>
-              )
-            }
+              </div>
+            )
           })}
         </div>
 

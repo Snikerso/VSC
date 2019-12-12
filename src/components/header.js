@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import logo from "../images/log-vs.png"
+import logo from "../images/logo.png"
 import Navigation from './navigation-bar'
 const Header = ({ siteTitle }) => (
   <header
@@ -9,7 +9,6 @@ const Header = ({ siteTitle }) => (
       backgroundColor: 'white',
       textAlign: 'center',
       fontColor: 'black'
-
     }}
   >
     <div className="head"
