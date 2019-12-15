@@ -1,8 +1,4 @@
 module.exports = {
-  pathPrefix: "/ my_project",
-}
-
-module.exports = {
 
   siteMetadata: {
     title: `Visual Spatial Cognition`,
