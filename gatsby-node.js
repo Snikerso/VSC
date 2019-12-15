@@ -23,7 +23,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
  ` )
 
-  uslugiQuery.data.naszeuslugi.uslugi.edges.forEach(post => {
+  uslugiQuery.data.persons.aktualnoscisConnection.edges.forEach(post => {
     createPage({
       path: post.node.slug,
       component: uslugiTemplate,
