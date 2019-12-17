@@ -5,7 +5,8 @@ import { MdMenu, MdGroup, MdGroupAdd, MdEmail, MdVisibility } from 'react-icons/
 import { AiOutlineLaptop, AiOutlineEye, AiOutlineExperiment } from "react-icons/ai";
 import { FaMicrochip, FaBookOpen, FaClipboard } from 'react-icons/fa';
 
-const Navigation = () => {
+const NavigationBar = () => {
+
     const [navOpen, setNavOpen] = useState(false);
 
     return (
@@ -14,6 +15,7 @@ const Navigation = () => {
             < nav className={"nav-mobile"}  >
                 <div className="nav-mobile-bar" onClick={() => setNavOpen(!navOpen)}><MdMenu /></div>
                 <ol className={navOpen ? "nav-mobile-active" : "nav-mobile-unactive"} >
+
                     <div className="nav-mobile-bar-delete" onClick={() => setNavOpen(!navOpen)}>x</div>
 
                     <Link className="nav-li" to="/">
@@ -28,6 +30,9 @@ const Navigation = () => {
                     <Link className="nav-li" to="/badania">
                         <div className="nav-li-name">BADANIA</div>
                     </Link>
+                    <Link className="nav-li" to="/aktualnosci">
+                        <div className="nav-li-name">AKTUALNOŚCI</div>
+                    </Link>
                     <Link className="nav-li" to="/oprogramowanie">
                         <div className="nav-li-name">SPRZĘT</div>
                     </Link>
@@ -40,9 +45,7 @@ const Navigation = () => {
                     <Link className="nav-li" to="/kontakt">
                         <div className="nav-li-name">KONTAKT</div>
                     </Link>
-                    <Link className="nav-li" to="/aktualnosci">
-                        <div className="nav-li-name">AKTUALNOŚCI</div>
-                    </Link>
+
                 </ol>
             </nav >
 
@@ -50,4 +53,4 @@ const Navigation = () => {
         </>
     )
 }
-export default Navigation
+export default NavigationBar

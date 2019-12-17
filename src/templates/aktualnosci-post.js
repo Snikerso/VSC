@@ -1,27 +1,27 @@
 import React from "react"
-import ReactMarkdown from 'react-markdown'
-
 import Layout from "../components/layout"
-
-
+import { Link } from "gatsby"
+const ReactMarkdown = require('react-markdown/with-html')
 const AktualnosciTemplate = ({ pageContext: { data } }) => {
 
     return (
 
         <Layout>
-
-
-
-            <div className="page-template">
-                <h1>{data.tytul}</h1>
-                <ReactMarkdown source={data.htm.html} />
-                <div>{data.htm.html}</div>
-
-
+            <div className="title-page-contener">
+                <div className="line-left"></div>
+                <div className="title-page">{data.title}</div>
+                <div className="line-right"></div>
             </div>
 
-
-
+            <div className="news-template-contener">
+                <div className="news-template">
+                    <ReactMarkdown
+                        source={data.cnjdsn}
+                        escapeHtml={false}
+                    />
+                </div>
+                <Link className="news-back" to="/aktualnosci">Wróć do aktualności</Link>
+            </div>
         </Layout>
     )
 }

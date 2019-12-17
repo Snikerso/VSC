@@ -1,57 +1,68 @@
 import React, { useState } from "react"
 import Layout from "../components/layout"
+import { graphql, Link } from "gatsby"
 
 
-const AktualnosciPage = () => {
+const AktualnosciPage = ({
+  data: {
+    allSitePage: { edges },
+  },
+}) => {
 
   return (
     <Layout>
-      
-        <div className="title-page-contener">
-          <div className="line-left"></div>
-          <div className="title-page">AKTUALNOŚCI</div>
-          <div className="line-right"></div>
-        </div>
-        <div className="news-contener">
-        <div className="news-card">
-          <h4>Tytuł aktualności dzis nauka pełni cuda</h4>
-          <div style={{ color: "#39C8DF" }}>08.12.2019</div>
-          <div style={{justifySelf: 'left'}} className="news-text">cmad c dam ammadmdamaa mm amdmadma  ma am mammdam am,a mam  ma ma</div>
-          
 
-          <div style={{ color: "blue" }} className="news-more" >Więcej</div>
+      <div className="title-page-contener">
+        <div className="line-left"></div>
+        <div className="title-page">AKTUALNOŚCI</div>
+        <div className="line-right"></div>
+      </div>
+      {edges.map(item => {
 
-        </div>
-      </div >
+        return (
+          <div className="news-contener">
+            <div className="news-card">
+              <h4>{item.node.context.data.title}</h4>
+              <div style={{ color: "#39C8DF" }}>08.12.2019</div>
+              <div style={{ justifySelf: 'left' }} className="news-text">
+                cmad c dam ammadmdamaa mm amdmadma  ma am mammdam am,a mam  ma ma
+              </div>
+
+
+              <Link to={item.node.context.data.slug}  className="badania-more" >Więcej</Link>
+
+            </div>
+          </div >
+
+        )
+      })}
 
     </Layout>
   )
-
-
 }
-// const [grid, setGrid] = useState(() => {
-//   const rows = [];
-//   for (let i = 0; i < numRows; i++) {
-//     rows.push(Array.from(Array(numCols), () => 0))
-//   }
-//   return rows
-// });
-// console.log(grid)
+
+export const allPostPagesQuery = graphql`
+{
+  allSitePage(filter: {isCreatedByStatefulCreatePages: {eq: false}}) {
+    edges {
+      node {
+        id
+        path
+        context {
+          data {
+            slug
+            title
+          }
+        }
+      }
+    }
+  }
+}
 
 
-// return (
-//   <div style={{ display: "grid", gridTemplateColumns: `repeat:(10,10px)` }}>
-//     <div >
-//       {grid.map((rows, i) =>
-//         rows.map((col, k) => (
-//           <div
-//             key={`${i}-${k}`}
-//             style={{ width: 20, height: 20, backgroundColor: 'red' }}
-//           ></div>
-//         ))
-//       )}
-//     </div>
-//   </div>
-// )
+`
+
+
 
 export default AktualnosciPage
+

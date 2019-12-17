@@ -34,8 +34,6 @@ const Osoby = () => (
                 <div>email: snikersdro@gmail.com</div>
                 <div ><a className="person-container-email" href="https://www.w3schools.com" target="__blank">Strona osobista: <MdLanguage /></a></div>
               </div>
-
-
             </div>
           )
         }

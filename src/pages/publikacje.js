@@ -1,13 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
 import { StaticQuery } from "gatsby"
+const ReactMarkdown = require('react-markdown/with-html')
 
 
-const publications = [
-  { id: 1, authors: "Ciechalska, D. i Gut, M. (2018).", title: "Komputerowe versus papierowe narzędzia oceny umiejętności matematycznych dzieci." },
-
-
-]
 const PublicationPage = () => (
   <Layout>
     <div className="title-page-contener">
@@ -20,21 +16,23 @@ const PublicationPage = () => (
     query{
       persons {
         publicationses {
-          id
-          title
-          publicationContent
-          
+          publications     
         }
       }
     }
     `}
       render={({ persons: { publicationses } }) => (
-        <div className="publications">
+        <div class="csl-bib-body" style={{ lineheight: 30, marginleft: '2em', textindent: '-2em' }}>
           {publicationses.map(function (item, i) {
             return (
-              <div>
-                <div className="publications-item">{item.publicationContent}</div>
-              </div>
+
+
+              <ReactMarkdown
+                source={item.publications}
+                escapeHtml={false}
+
+              />
+
             )
           })}
         </div>

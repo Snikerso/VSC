@@ -22,8 +22,12 @@ const Navigation = () => {
                     <Link className="nav-li" to="/publikacje">
                         <div className="nav-li-name">PUBLIKACJE</div>
                     </Link>
+
                     <Link className="nav-li" to="/badania">
                         <div className="nav-li-name">BADANIA</div>
+                    </Link>
+                    <Link className="nav-li" to="/aktualnosci">
+                        <div className="nav-li-name">AKTUALNOŚCI</div>
                     </Link>
                     <Link className="nav-li" to="/oprogramowanie">
                         <div className="nav-li-name">SPRZĘT</div>
@@ -37,9 +41,7 @@ const Navigation = () => {
                     <Link className="nav-li" to="/kontakt">
                         <div className="nav-li-name">KONTAKT</div>
                     </Link>
-                    <Link className="nav-li" to="/aktualnosci">
-                        <div className="nav-li-name">AKTUALNOŚCI</div>
-                    </Link>
+
                 </ol>
 
             </nav>

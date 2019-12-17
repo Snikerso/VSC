@@ -27,12 +27,12 @@ const ItemAnnounce = ({ item, handleText }) => {
 
                 </div>
                 <div className="more-information">
-                    {item.cos ? 
-                    <div className="more-information-active">
-                     Paweł Drojecki
-                     kom: 663406297  
-                     e-mail: snikersdro@gmail.com 
-                    </div> : null}
+                    {item.cos ?
+                        <div className="more-information-active">
+                            <p> Paweł Drojecki</p>
+                            <p> kom: 663406297  </p>
+                            <p> e-mail: snikersdro@gmail.com </p>
+                        </div> : null}
                 </div>
             </div>
         </>

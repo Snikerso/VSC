@@ -1,4 +1,8 @@
 module.exports = {
+  pathPrefix: "/VSC",
+}
+
+module.exports = {
 
   siteMetadata: {
     title: `Visual Spatial Cognition`,

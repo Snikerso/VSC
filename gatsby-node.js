@@ -2,19 +2,22 @@ const path = require("path")
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const uslugiTemplate = path.resolve(`src/templates/aktualnosci-post.js`)
+  const aktualnosciTemplate = path.resolve(`src/templates/aktualnosci-post.js`)
   // Query for markdown nodes to use in creating pages.
-  const uslugiQuery = await graphql(
+  const AktualnosciQuery = await graphql(
     `
 {
   persons
    {
-     aktualnoscisConnection
+     aktualnoscis: aktualnoscisConnection(first:100)
          {
             edges {
               node {
                 title
                 slug
+                data
+                content
+                cnjdsn
               }
               }
             }
@@ -23,10 +26,10 @@ exports.createPages = async ({ graphql, actions }) => {
 
  ` )
 
-  uslugiQuery.data.persons.aktualnoscisConnection.edges.forEach(post => {
+  AktualnosciQuery.data.persons.aktualnoscis.edges.forEach(post => {
     createPage({
       path: post.node.slug,
-      component: uslugiTemplate,
+      component: aktualnosciTemplate,
       context: {
         data: post.node,
       }

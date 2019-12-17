@@ -169,10 +169,12 @@ nav.unactive .logo{
 nav ol{
   display: grid;
   grid-template-columns: repeat(9,1fr);
+  justify-items: center;
 }
 nav li{
   list-style: none;
   font-size: 17px;
+
 }
 nav a {
   text-decoration: none;
@@ -180,6 +182,9 @@ nav a {
 .nav-li{
 display: grid;
 grid-template-columns: 1fr;
+margin-top: 2%;
+margin-bottom: 2%;
+width: 100%;
 
 }
 .nav-li-name{
@@ -188,6 +193,7 @@ grid-template-columns: 1fr;
   padding: 5%;
   border-radius: 10px;
   font-size: 14px;
+  
 }
 
 .nav-li-name:hover{
@@ -307,22 +313,25 @@ animation: fade1 17s infinite; -webkit-animation: fade1 17s infinite;
   align-content: center;
   justify-items: center;
   align-items: center;
- padding: 1%;
-  margin-top: 10%;
-  gap: 10%;
-  
+  padding: 1%;
+  margin-top: 5%;
+  margin-left: 4%;
+  margin-right: 4%;
+  column-gap: 5%;
 }
 .person-container-text-img{
   display: grid;
-  grid-template-columns: 1fr 1fr ;
+  grid-template-columns: 40% auto ;
   border: 3px solid #39C8DF ;
   box-shadow: 0px 0px  1px 0px #777777;
   border-radius: 40px;
   width:100%;
+  margin-top:10%;
+  
 }
 .person-container-img{
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  min-height: 200px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -349,8 +358,8 @@ animation: fade1 17s infinite; -webkit-animation: fade1 17s infinite;
    
   }
   .person-container-email{
-color: #39C8DF;
-text-decoration: none;
+  color: #39C8DF;
+  text-decoration: none;
   }
 /* .persons > div:nth-child(even){
   justify-items: right;
@@ -476,6 +485,7 @@ margin-top: 2%;
 }
 .badania-more{
 color: #39C8DF;
+text-decoration: none;
 }
 .badania-image{
 border: #39C8DF 2px solid;
@@ -492,6 +502,7 @@ height: 80%;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  max-height: 40vh;
   }
 
 /* PUBLIKACJE ................................................................. */
@@ -507,6 +518,11 @@ height: 80%;
   width: 100%;
   list-style-type: none;
   font-size: 14px;
+}
+.csl-bib-body > div{
+  margin-top: 1%;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 /* OGLOSZENIA.................................................................. */
 .news-contener{
@@ -555,11 +571,33 @@ justify-self: right;
 .news-more{
   align-self: flex-end;
 }
+.news-template-contener{
+  width: 100%;
+}
+.news-template{
+  margin: auto auto;
+  text-justify: left;
+  margin: 5%;
+}
+.news-template >p{
+margin-top: 3%;
+width: 100%;
+}
+.news-template >p>img{
+  margin-top: 3%;
+  width: 50%;
+  }
+  .news-back{
+    color: #39C8DF;
+    text-decoration: none;
+    margin-left: 80%;
+  }
 /* Ogłoszenia ...................................................... */
 .announce{
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
+
 }
 .announce-card{
   display: grid;
@@ -570,7 +608,7 @@ justify-self: right;
   margin: 5%;
   margin-bottom: 0;
   padding: 3%;
-  box-shadow: 2px  4px 4px #777777;
+  /* box-shadow: 2px  4px 4px #777777; */
   border: 2px solid #39C8DF ;
   border-radius: 20px;
   z-index: 0;
@@ -585,14 +623,16 @@ justify-self: right;
   border-radius: 50px;
   padding: 10%;
   width: 100%;
-  box-shadow: 0px 0px 4px 0px #777777;
+  box-shadow: 0px 0px 2px 0px #777777;
 }
 .announce-head{
   justify-self: left;
 }
 .more-information{
+  display: grid;
+
   width: 45%;
-  height: 10vh;
+  height: 17vh;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -601,7 +641,7 @@ justify-self: right;
   background-color: #fff;
   width: 45%;
   padding: 3%;
-  box-shadow: 2px  4px 4px #777777;
+  /* box-shadow: 2px  4px 4px #777777; */
   border: 2px solid #39C8DF;
   border-top: none;
   border-radius: 4px;

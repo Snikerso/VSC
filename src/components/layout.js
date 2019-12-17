@@ -24,9 +24,6 @@ const Layout = ({ children }) => {
         <Navigation />
 
         <main>{children}
-
-
-
           <div className="title-page-contener footer-lines">
             <div className="line-left"></div>
             <div className="title-page"></div>
