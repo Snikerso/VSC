@@ -1,3 +1,8 @@
+:root{
+  --mainColor: red
+}
+
+
 @import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text:300&display=swap');
 *{
   margin: 0;
@@ -597,7 +602,7 @@ width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-
+  
 }
 .announce-card{
   display: grid;

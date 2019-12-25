@@ -1,0 +1,45 @@
+import React, { useState } from "react"
+import Collapse from '@material-ui/core/Collapse';
+import Typography from '@material-ui/core/Typography';
+import ItemSritem from './itemSritem'
+
+
+const ItemSoftHard = ({ softwares }) => {
+
+    const col = false
+
+    let newSoft = softwares.map(item => {
+        return { ...item, col }
+
+    })
+
+    const [expands, setExpands] = useState(newSoft)
+
+    
+    const handleText = (id,item) => {
+        console.log(item.col)
+        let tempHours = expands.find(item => item.id === id)
+        console.log(tempHours.col = !tempHours.col)
+        // 
+        setExpands([...expands])
+    }
+
+    return (
+        <>
+            {expands.map(item => {
+                return (
+                    <ItemSritem
+                        handleText={handleText}
+                        expands={expands}
+                        item={item}
+                    />
+                )
+            })
+
+            }
+        </>
+    )
+}
+
+
+export default ItemSoftHard

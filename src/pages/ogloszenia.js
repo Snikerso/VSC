@@ -21,7 +21,7 @@ const OgloszeniaPage = () => {
         console.log(tempHours.cos = !tempHours.cos)
         // 
         setCollapsedText([...collapsedtext])
-
+        
         // setCollapsedText(...collapsedtext,!cos)
 
     }

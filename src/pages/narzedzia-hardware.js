@@ -35,7 +35,7 @@ const HardwarePage = () => {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
-
+    
     setExpanded(!expanded);
   };
 
