@@ -101,14 +101,18 @@ gap:5%
 }
 /* FOOTER................................................ */
 footer{
+
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
  text-align: center;
  margin-top: 4%;
- margin-bottom: 10%;
+ margin-bottom: 4%;
+ justify-items: center;
+ column-gap: 30%;
 }
 footer div{
+  width: 100%;
   line-height: 30px;
   font-family: 'Barlow Semi Condensed', sans-serif;
 }
@@ -124,6 +128,8 @@ footer div{
   display: none;
 }
 nav{
+  width: 90%;
+  margin: 0 auto;
   margin-top: 5%;
   background-color: white;
   top: 0;
@@ -254,11 +260,10 @@ min-height: 100vh;
   display:grid;
   grid-template-columns:  1fr ;
   margin-top: 5%;
-justify-items: center;
+  justify-items: center;
 
 }
 .onas-baner{
- 
   width: 60vw;
   height: 25vw;
   border: #39C8DF 3px solid;
@@ -332,7 +337,6 @@ animation: fade1 17s infinite; -webkit-animation: fade1 17s infinite;
   border-radius: 40px;
   width:100%;
   margin-top:10%;
-  
 }
 .person-container-img{
   width: 100%;
@@ -356,7 +360,7 @@ animation: fade1 17s infinite; -webkit-animation: fade1 17s infinite;
 
 }
 .person-container-head{
-  justify-self: center;
+  justify-self: left;
 }
 .persons > div{
   justify-items: left;
@@ -492,6 +496,10 @@ margin-top: 2%;
 color: #39C8DF;
 text-decoration: none;
 }
+.badania-more:hover{
+  color: rgb(54, 178, 197);
+  text-decoration: none;
+  }
 .badania-image{
 border: #39C8DF 2px solid;
 border-radius: 20px;
@@ -529,19 +537,22 @@ height: 80%;
   margin-left: 4%;
   margin-right: 4%;
 }
+.csl-bib-body > h3{
+ margin: 4%;
+}
 /* OGLOSZENIA.................................................................. */
 .news-contener{
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr ;
   width: 100%;
   justify-items: center;
 }
 
 .news-card{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-items: center;
-  gap: 5%;
+  column-gap: 5%;
   width: 65%;
   min-height: 20vh;
   margin: 5%;
@@ -550,18 +561,18 @@ height: 80%;
   border: 2px solid #39C8DF ;
   border-radius: 20px;
 }
-.announce-head-data{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
+.news-card div,h4{
+  margin-top: 10px;
 }
-.announce-data{
-color: #39C8DF;
-justify-self: right;
-}
+
 .news-card h4{
   justify-self: left;
-  grid-column: 1 / span 3;
+
+}
+.news-image-text{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5%;
 }
 .news-buttons{
   margin-top: 20px;
@@ -570,11 +581,29 @@ justify-self: right;
 
 }
 .news-text{
-  grid-column: 1 / span 3;
+
+}
+.news-image{
+  border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  max-height: 40vh;
+  
 
 }
 .news-more{
-  align-self: flex-end;
+  margin-top: 5%;
+  margin-right: 40%;
+  text-align: right;
+  width: 100%;
+  justify-items: center;
+  color: #39C8DF;
+  text-decoration: none;
+  cursor: pointer;
+  
 }
 .news-template-contener{
   width: 100%;
@@ -618,6 +647,19 @@ width: 100%;
   border-radius: 20px;
   z-index: 0;
   justify-content: center;
+}
+.announce-head-data{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  width: 100%;
+}
+.announce-data{
+color: #39C8DF;
+justify-self: center;
+text-align: center;
+margin-top: 0;
+width: 100%;
+
 }
 .announce-card>div{
   margin-top: 5%;
@@ -811,6 +853,14 @@ iframe body {
   .person-container-text-img{
     width: 80%;
   }
+  .news-image-text{
+    display: grid;
+    grid-template-columns: 1fr;
+    
+  }
+  .news-image{
+    height: 40vh;
+  }
 
 }
 
@@ -828,6 +878,7 @@ iframe body {
   }
   .nav-mobile-bar-delete{
     color: #39C8DF;
+    cursor: pointer;
   }
   .nav-mobile-unactive{
     display: none;
@@ -842,10 +893,18 @@ iframe body {
     margin-left: 0;
     width: 30%;
     animation: navigation-bar 1s;
+    padding-bottom: 3%;
   }
   .nav-mobile-active .nav-li-name{
     margin-top: 7%;
-    margin-right: 4%;
+    border-radius: 0;
+    
+  }
+  .nav-mobile-active .nav-li-name:hover{
+
+   
+   
+    
     
   }
   @keyframes navigation-bar{
@@ -869,7 +928,6 @@ to{top:0}
 @media screen and (max-width: 860px)
 {
 
-
   .person-container-text-img{
     margin-top: 5%;
     width: 90%;
@@ -877,12 +935,25 @@ to{top:0}
 }
 @media screen and (max-width: 760px)
 {
+  .badania-text-image{
+    display: grid;
+    grid-template-columns: 1fr;
+ 
+  }
+  .badania-narzedzia-image{
+   height: 30vh;
+ 
+  }
   .person-container-text-img{
     grid-template-columns: 40% 60%;
   }
 }
 @media screen and (max-width: 650px)
 {
+  .onas-baner {
+    width: 80%;
+  height: 30vh;
+  }
   .persons{
     grid-template-columns: 1fr 1fr;
   }
@@ -905,6 +976,7 @@ to{top:0}
 }
 @media screen and (max-width: 550px)
 {
+
   .persons{
     grid-template-columns: 1fr;
 
@@ -923,13 +995,34 @@ to{top:0}
 @media screen and (max-width: 430px)
 {
 
+
   .person-container-text-img{
     width: 60%;
+  }
+
+  .nav-mobile-active{
+    position: fixed;
+    border-radius: 10px;
+    right: 0;
+    top: 0;
+    background-color: white;
+    border: #39C8DF 1px solid;
+    margin-left: 0;
+    width: 100%;
+    animation: navigation-bar 1s;
+    padding-bottom: 3%;
+  }
+  .onas p{
+    margin: 4%;
   }
 
 }
 @media screen and (max-width: 370px)
 {
+  .onas-baner {
+    width: 90%;
+  height: 35vh;
+  }
   .person-container-text-img{
     width: 70%;
   }

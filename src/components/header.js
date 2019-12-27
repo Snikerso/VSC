@@ -1,8 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
-import logo from "../images/logoo.png"
-import NavigationBar from './navigation-bar'
+import logo from "../images/ost1.png"
 import { MdMenu } from 'react-icons/md';
 
 
@@ -24,9 +23,13 @@ const Header = ({ siteTitle }) => {
 
           }}
         >
-          <figure>
-            <img className="logo" src={logo} ></img>
-          </figure>
+          <Link to="/">
+            <figure>
+
+              <img className="logo" src={logo} ></img>
+
+            </figure>
+          </Link>
           <div style={{ margin: 0, color: 'black' }}>
             <Link
               to="/"

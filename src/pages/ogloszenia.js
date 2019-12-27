@@ -1,52 +1,58 @@
-import React, { useState } from "react"
+import React from "react"
 import Layout from "../components/layout"
-import ItemAnnounce from "../components/ItemAnnounce"
-
-const ogloszenia = [
-    { id: 1, cos: false, help: true, subject: true, title: "Gaze-Button", text: "Dyskalkulia jest deficytem dotyczącym nabywania podstawowych zdolności numerycznych (bazowych kompetencji przetwarzania liczb) występującym przy jednoczesnej normie intelektualnej (ilorazie inteligencji w normie). Oznacza to, że problem osoby z dyskalkulią dotyczy wybiórczo umiejętności związanych z matematyką, podczas gdy nie wykazuje ona innych deficytów. Należy jednak pamiętać, że „czysta” dyskalkulia występuje bardzo rzadko, zaś znacznie częściej spotykamy się ze współwystępowaniem tego zaburzenia z innymi, np. dysleksją czy deficytami uwagi. Literatura podaje, że osoby cierpiące na dyskalkulię stanowią 3-6% ogólnej populacji. Trzeba jednak wiedzieć, że wiele osób z dyskalkulią nie jest diagnozowanych, jak również nierzadko stawiana jest niewłaściwa diagnoza (diagnozuje się dyskalkulię, podczas gdy problem leży zupełnie gdzie indziej, np. w deficytach funkcji językowych czy pamięciowych). Często przyczyną są niedoskonałe narzędzia diagnozy." },
-    { id: 2, cos: false, help: false, subject: true, title: "Move-Eye", text: "Lorem Ipsum to po prostu fikcyjny tekst branży drukarskiej i składu. Lorem Ipsum jest standardowym tekstem manekina w branży od 1500 roku, kiedy nieznana drukarka wzięła galerię typu i gramoliła się, aby stworzyć książkę z typami. Przetrwał nie tylko pięć wieków, ale także skok do składu elektronicznego, pozostając zasadniczo niezmieniony." },
-
-]
+import { StaticQuery } from 'gatsby'
+import ItemAnnounce from '../components/ItemAnnounce'
 
 
-const OgloszeniaPage = () => {
-    const [collapsedtext, setCollapsedText] = useState(ogloszenia)
-
-    console.log(collapsedtext)
-
-    const handleText = (id) => {
 
 
-        let tempHours = collapsedtext.find(item => item.id === id)
-        console.log(tempHours.cos = !tempHours.cos)
-        // 
-        setCollapsedText([...collapsedtext])
-        
-        // setCollapsedText(...collapsedtext,!cos)
 
+const SoftWarePage = () => {
+
+
+  return (
+    <Layout>
+      <StaticQuery
+        query={graphql`
+    query{
+      persons {
+        ogloszenias {
+          title
+          id
+          description
+          createdAt
+          
+
+        }
+      }
     }
-    return (
-        <Layout>
-            <div className="title-page-contener">
+    `}
+        render={({ persons: { ogloszenias } }) => {
+          // Tworzenie persons z falsem 
+
+
+
+          return (
+            <div className="narzedzia">
+              <div className="title-page-contener-hardware">
                 <div className="line-left"></div>
-                <div className="title-page">OGŁOSZENIA</div>
+                <div className="title-page">SOFTWARE</div>
                 <div className="line-right"></div>
+              </div>
+
+              <ItemAnnounce
+                ogloszenias={ogloszenias}
+              />
+
             </div>
-            {collapsedtext.map(item => {
+          )
+        }}
 
-                return (
-                    <ItemAnnounce
-                        key={item.id}
-                        item={item}
-                        handleText={handleText}
-                    />
-                )
-            })}
+      />
 
+    </Layout>
+  )
 
-
-
-        </Layout >
-    )
 }
-export default OgloszeniaPage
+
+export default SoftWarePage

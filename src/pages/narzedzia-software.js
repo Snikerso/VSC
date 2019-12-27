@@ -1,4 +1,4 @@
-import React,{useEffect} from "react"
+import React from "react"
 import Layout from "../components/layout"
 import { StaticQuery } from 'gatsby'
 import ItemSofthard from '../components/ItemSoftHard'
@@ -10,40 +10,6 @@ import ItemSofthard from '../components/ItemSoftHard'
 const SoftWarePage = () => {
 
 
-  // const col = false
-
-  // let newTemp = softwares.map(item => {
-  //   return { ...item, col }
-  // })
-
-
-  // const handleText = (id, softwares) => {
-
-
-
-
-
-    // let items = expanded.map(item => {
-    //   return item.col
-    // })
-    // console.log(items)
-
-    // let oneColapse = newTemp.find(item => item.id === id)
-
-
-
-
-    // const {id, description} = tempHours
-    // let newTemp = [id,description,colapse]
-    // console.log(newTemp)
-
-    // let tempExpenses = softwares.map(item => {
-    //   return item.id === id ? { ...item } : item;
-    // })
-    // console.log(softwares)
-
-  // }
-
   return (
     <Layout>
       <StaticQuery
@@ -51,6 +17,7 @@ const SoftWarePage = () => {
     query{
       persons {
         softwares {
+          title
           id
           description
           descriptionMore
@@ -69,10 +36,15 @@ const SoftWarePage = () => {
 
           return (
             <div className="narzedzia">
-              
-                  <ItemSofthard
-                    softwares={softwares}
-                  />
+              <div className="title-page-contener-hardware">
+                <div className="line-left"></div>
+                <div className="title-page">SOFTWARE</div>
+                <div className="line-right"></div>
+              </div>
+
+              <ItemSofthard
+                softwares={softwares}
+              />
 
             </div>
           )

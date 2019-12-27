@@ -1,14 +1,12 @@
-import React , {useState} from "react"
+import React, { useState } from "react"
+import ItemSritem from './itemSritem'
 
-import ItemAnn from './ItemAnn'
 
-
-const ItemAnnounce = ({ ogloszenias }) => {
-
+const ItemBad = ({ badanias }) => {
 
     const col = false
 
-    let newSoft = ogloszenias.map(item => {
+    let newSoft = badanias.map(item => {
         return { ...item, col }
 
     })
@@ -17,17 +15,18 @@ const ItemAnnounce = ({ ogloszenias }) => {
 
 
     const handleText = (id, item) => {
-
+        console.log(item.col)
         let tempHours = expands.find(item => item.id === id)
         console.log(tempHours.col = !tempHours.col)
         // 
         setExpands([...expands])
     }
+
     return (
         <>
             {expands.map(item => {
                 return (
-                    <ItemAnn
+                    <ItemSritem
                         handleText={handleText}
                         expands={expands}
                         item={item}
@@ -41,4 +40,4 @@ const ItemAnnounce = ({ ogloszenias }) => {
 }
 
 
-export default ItemAnnounce
+export default ItemBad

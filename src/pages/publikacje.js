@@ -1,6 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 import { StaticQuery } from "gatsby"
+
+
 const ReactMarkdown = require('react-markdown/with-html')
 
 

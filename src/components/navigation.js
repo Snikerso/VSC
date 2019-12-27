@@ -1,9 +1,5 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import { IoIosFlask, IoMdBook } from 'react-icons/io';
-import { MdMenu, MdGroup, MdGroupAdd, MdEmail, MdVisibility } from 'react-icons/md';
-import { AiOutlineLaptop, AiOutlineEye, AiOutlineExperiment } from "react-icons/ai";
-import { FaMicrochip, FaBookOpen, FaClipboard } from 'react-icons/fa';
 
 const Navigation = () => {
     const [navOpen, setNavOpen] = useState(false);

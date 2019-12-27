@@ -18,6 +18,9 @@ exports.createPages = async ({ graphql, actions }) => {
                 data
                 content
                 cnjdsn
+                photo{
+                  url
+                }
               }
               }
             }
