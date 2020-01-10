@@ -34,19 +34,16 @@ export default class MyForm extends React.Component {
             <textarea name="content" id="content" type="text" placeholder="Treść wiadomości"></textarea>
 
 
-            {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
-            {status === "ERROR" && <p>Ooops! There was an error.</p>}
+            {status === "SUCCESS" ? <p>Dzięki!</p> : <button>Wyślij</button>}
+            {status === "ERROR" && <p>Błąd</p>}
           </form>
           <div className="contact-photo-text">
             <div className="contact-photo" style={{ backgroundImage: `url(${require('../images/hardware.jpg')})` }}></div>
 
             <div className="contact-text">
               <p>mathcoglab@umk.pl</p>
-
               <p>ICNT na gagarina</p>
-
               <p>ul. Gagarina</p>
-
               <p>87-100 Toruń</p>
             </div>
           </div>

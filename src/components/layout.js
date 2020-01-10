@@ -5,6 +5,14 @@ import Header from "./header"
 import Navigation from './navigation'
 import "./layout.css"
 
+
+// 1. Zmniejczyc czcionke footera
+// 2. odległosci kresek headerów
+// 3. hardware software obramowanie radius
+// odleglos tytulu od zdjecia badania...
+// Zmniejszyc odleglosci miedzy koncem telefonu  a komórką
+
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
