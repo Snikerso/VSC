@@ -22,7 +22,7 @@ const Osoby = () => (
     `}
     render={({ persons: { osobies } }) => (
       <div className="persons">
-        {osobies.map(function (item, i) {
+        {osobies.map(item => {
 
           return (
 
