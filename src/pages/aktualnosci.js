@@ -29,8 +29,10 @@ const AktualnosciPage = ({
               <div className="news-image-text">
                 <div style={{ justifySelf: 'left' }} className="news-text">
                   {item.node.context.data.content}
-                  <Link to={item.node.context.data.slug} className="news-more" >Więcej...</Link>
 
+                 
+                    <Link to={item.node.context.data.slug} className="news-more" >Więcej...</Link>
+                  
                 </div>
 
                 <div className="news-image" style={{ backgroundImage: `url(${item.node.context.data.photo.url})` }}></div>
@@ -39,7 +41,7 @@ const AktualnosciPage = ({
 
 
 
-             
+
             </div>
           </div >
 

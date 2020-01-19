@@ -20,7 +20,9 @@ const AktualnosciTemplate = ({ pageContext: { data } }) => {
                         escapeHtml={false}
                     />
                 </div>
-                <Link className="news-back" to="/aktualnosci">Wróć do aktualności</Link>
+                <div className="news-back"> 
+                    <Link className="news-back" to="/aktualnosci">Wróć do aktualności</Link>
+                </div>
             </div>
         </Layout>
     )

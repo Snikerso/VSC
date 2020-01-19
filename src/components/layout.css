@@ -584,10 +584,10 @@ height: 80%;
 
 }
 .news-image{
-  border-radius: 10px;
+  border-radius: 20px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   width: 100%;
   height: 100%;
   min-height: 25vh;
@@ -624,7 +624,9 @@ width: 100%;
   .news-back{
     color: #39C8DF;
     text-decoration: none;
-    margin-left: 80%;
+    margin-right: 10%;
+    width: 100%;
+    text-align: right;
   }
 /* Ogłoszenia ...................................................... */
 .announce{
@@ -707,9 +709,11 @@ width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
-  width: 70%;
-  margin: 0 auto;
+  align-content: center;
+  width: 100%;
+  margin: 29 auto;
   margin-top: 5%;
+
 }
 .contact-photo-text{
   display: grid;
@@ -719,13 +723,13 @@ width: 100%;
   margin-top: 10%;
 }
 .contact-photo{
-
 height: 25vh;
 width: 140%;
 border-radius: 20px;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
+
 }
 .contact-text{
   text-align: center;
@@ -736,6 +740,8 @@ background-size: cover;
   border-radius: 20px;
   color: white;
   line-height: 25px;
+  margin-top: 10%;
+  display: grid;
 }
 .iframe{
   
@@ -756,15 +762,19 @@ iframe{
   padding-top: 7%;
   border-radius: 20px;
   gap: 30px;
-  justify-items: center;
+  align-items: center;
   margin-top: 5%;
-  width: 70%;
+  width: 80%;
+  
 }
 .contact-form input{
   border: #39C8DF 2px solid;
   border-radius: 10px;
   padding: 6px;
-  width: 70%;
+  margin: 0 auto;
+  width: 60%;
+  
+  
 }
 .contact-form input:focus{
   box-shadow: inset 0 0 2px 2px #39C8DF;
@@ -773,8 +783,9 @@ iframe{
   border: #39C8DF 2px solid;
   border-radius: 10px;
   padding: 6px;
+  height: 10vh;
+  margin: 0 auto;
   width: 80%;
-  height: 7vw;
 }
 .contact-form button{
   border: #39C8DF 2px solid;
@@ -787,10 +798,10 @@ iframe{
   font-size: 16px;
   letter-spacing: 0.8px;
   box-shadow: #777777 0px 0px 3px 0px;
+  margin: 0 auto;
 }
 .contact-form button:hover{
   border: #39C8DF 2px solid;
-
   box-shadow: #777777 0px 0px 5px 0px;
 }
 /* KALENDARZ........................................................................................ */
@@ -903,10 +914,8 @@ iframe body {
     grid-template-columns: 1fr;
 
   }
-  .contact-photo-text{
-  }
-  .contact-photo{
-  
+  .contact-form{
+    width: 60%;
   }
   .contact-text{
     display: grid;
@@ -917,6 +926,7 @@ align-items: center;
   @keyframes navigation-bar{
 from{top:-250px}
 to{top:0}
+
   }
 
   .nav-screen{
@@ -942,6 +952,8 @@ to{top:0}
 }
 @media screen and (max-width: 760px)
 {
+  
+
   .badania-text-image{
     display: grid;
     grid-template-columns: 1fr;
@@ -957,6 +969,13 @@ to{top:0}
 }
 @media screen and (max-width: 650px)
 {
+  .title-page{
+    font-size: 30px;
+  }
+  .software-menu , .hardware-menu{
+    border-radius: 15px;
+    margin: 0 auto;
+  }
   .onas-baner {
     width: 80%;
   height: 30vh;
@@ -966,7 +985,6 @@ to{top:0}
   }
   .person-container-text-img{
     grid-template-columns: 1fr;
- 
   }
   .person-container-text{
     margin: 7px;
@@ -983,7 +1001,7 @@ to{top:0}
 }
 @media screen and (max-width: 550px)
 {
-
+ 
   .persons{
     grid-template-columns: 1fr;
 
@@ -996,6 +1014,9 @@ to{top:0}
   }
   .person-container-text div{
     margin-bottom: 10px;
+  }
+  footer{
+    font-size: 13px;
   }
   
 }
@@ -1018,6 +1039,7 @@ to{top:0}
     width: 100%;
     animation: navigation-bar 1s;
     padding-bottom: 3%;
+    height: 100%;
   }
   .onas p{
     margin: 4%;

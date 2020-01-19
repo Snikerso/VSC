@@ -9,8 +9,8 @@ const IndexPage = () => {
       <SEO title="Home" />
       <div className="onas-baner">
         <div className="slider-1" style={{ backgroundImage: `url(${require('../images/hardware.jpg')})` }}></div>
-        <div className="slider-2" style={{ backgroundImage: `url(${require('../images/arch_icnt_om_54.jpg')})` }}></div>
-        <div className="slider-3" style={{ backgroundImage: `url(${require('../images/bibi08-2017_19.jpg')})` }}></div>
+        <div className="slider-2" style={{ backgroundImage: `url(${require('../images/joistick.jpg')})` }}></div>
+        <div className="slider-3" style={{ backgroundImage: `url(${require('../images/mozg_laptop.jpg')})` }}></div>
       </div>
 
       <div className="title-page-contener">

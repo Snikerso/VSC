@@ -1,6 +1,4 @@
-module.exports = {
-  pathPrefix: "/VSC",
-}
+
 
 module.exports = {
 
