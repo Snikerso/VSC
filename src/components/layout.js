@@ -40,14 +40,14 @@ const Layout = ({ children }) => {
           <footer>
             <div>
               <h3>Kontakt</h3>
-              <p>Email: mathcoglab@umk.pl</p>
-              <p>nr: mathcoglab@umk.pl</p>
+              <p>Email: </p>
+              <p>nr: </p>
             </div>
             <div>
               <h3>Adres</h3>
-              <p>ICNT na gagarina</p>
-              <p>ul. Gagarina</p>
+              <p>ul. Wileńska 4,</p>
               <p>87-100 Toruń</p>
+
             </div>
           </footer>
         </main>

@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
-import logo from "../images/logoo.png"
+import logo from "../images/logovisc.png"
 import { MdMenu } from 'react-icons/md';
 
 

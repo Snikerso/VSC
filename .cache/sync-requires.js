@@ -6,7 +6,6 @@ const preferDefault = m => m && m.default || m
 
 exports.components = {
   "component---src-templates-aktualnosci-post-js": hot(preferDefault(require("C:\\Users\\Lenovo\\Desktop\\eyetracking_page\\eyetracking\\src\\templates\\aktualnosci-post.js"))),
-  "component---cache-dev-404-page-js": hot(preferDefault(require("C:\\Users\\Lenovo\\Desktop\\eyetracking_page\\eyetracking\\.cache\\dev-404-page.js"))),
   "component---src-pages-404-js": hot(preferDefault(require("C:\\Users\\Lenovo\\Desktop\\eyetracking_page\\eyetracking\\src\\pages\\404.js"))),
   "component---src-pages-aktualnosci-js": hot(preferDefault(require("C:\\Users\\Lenovo\\Desktop\\eyetracking_page\\eyetracking\\src\\pages\\aktualnosci.js"))),
   "component---src-pages-badania-js": hot(preferDefault(require("C:\\Users\\Lenovo\\Desktop\\eyetracking_page\\eyetracking\\src\\pages\\badania.js"))),

@@ -30,9 +30,9 @@ const ItemAnn = ({ item, handleText }) => {
 
                         <Typography paragraph>
                             <div style={{textAlign:'center'}}>
-                                <p> Paweł Drojecki</p>
+                                <p> {item.name}</p>
                                 
-                                <p>snikersdro@gmail.com </p>
+                                <p>{item.email} </p>
                             </div>
                         </Typography>
 

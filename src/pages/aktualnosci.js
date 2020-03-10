@@ -24,7 +24,7 @@ const AktualnosciPage = ({
             <div className="news-card">
               <div className="announce-head-data">
                 <h4>{item.node.context.data.title}</h4>
-                <div className="announce-data" style={{ color: "#39C8DF" }}>{item.node.context.data.data.substring(0, 10)}</div>
+                <div className="announce-data" style={{ color: "#256972" }}>{item.node.context.data.data.substring(0, 10)}</div>
               </div>
               <div className="news-image-text">
                 <div style={{ justifySelf: 'left' }} className="news-text">

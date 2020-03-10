@@ -3,7 +3,6 @@ const preferDefault = m => m && m.default || m
 
 exports.components = {
   "component---src-templates-aktualnosci-post-js": () => import("../src/templates/aktualnosci-post.js" /* webpackChunkName: "component---src-templates-aktualnosci-post-js" */),
-  "component---cache-dev-404-page-js": () => import("dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
   "component---src-pages-404-js": () => import("../src/pages/404.js" /* webpackChunkName: "component---src-pages-404-js" */),
   "component---src-pages-aktualnosci-js": () => import("../src/pages/aktualnosci.js" /* webpackChunkName: "component---src-pages-aktualnosci-js" */),
   "component---src-pages-badania-js": () => import("../src/pages/badania.js" /* webpackChunkName: "component---src-pages-badania-js" */),

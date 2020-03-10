@@ -1,7 +1,6 @@
 :root{
-  --mainColor: red
+  --main-bg-color:#256972 ;
 }
-
 
 @import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text:300&display=swap');
 *{
@@ -64,7 +63,8 @@ gap:5%
   position: relative;
   width: 100%;
   height: 2px;
-  background-color:#39C8DF;
+  background-color:var(--main-bg-color);
+  background-color: var(--main-bg-color);
 
 }
 .line-left::after{
@@ -74,14 +74,14 @@ gap:5%
   height: 15px;
   right: 0;
   top: -7px;
-  background-color: #39C8DF;
+  background-color: var(--main-bg-color);
   border-radius: 10px;
 }
 .line-right{
   position: relative;
   width: 100%;
   height: 2px;
-  background-color:#39C8DF;
+  background-color:var(--main-bg-color);
 }
 .line-right::after{
   position: absolute;
@@ -90,7 +90,7 @@ gap:5%
   height: 15px;
   left: 0;
   top: -7px;
-  background-color: #39C8DF;
+  background-color: var(--main-bg-color);
   border-radius: 10px;
 }
 .title-page{
@@ -210,7 +210,7 @@ width: 100%;
 .nav-li-name:hover{
   color:white;
   letter-spacing: 1px;
-  background-color: #39C8DF;
+  background-color: var(--main-bg-color);
   transition: background-color 1s;
 }
 /* .nav-li-name:before{
@@ -225,13 +225,13 @@ width: 100%;
   */
 
 @keyframes icone {
-  from{box-shadow: 0px 0px 0px 0px #39C8DF;}
-  to{box-shadow: 0px 0px 2px 2px #39C8DF;}
+  from{box-shadow: 0px 0px 0px 0px var(--main-bg-color);}
+  to{box-shadow: 0px 0px 2px 2px var(--main-bg-color);}
 }
 .nav-li-icon{
   border-radius: 50px;
   text-align: center;
-  color: #39C8DF ;
+  color: var(--main-bg-color) ;
 
 }
 .nav-li-icon:hover{
@@ -266,7 +266,7 @@ min-height: 100vh;
 .onas-baner{
   width: 60vw;
   height: 25vw;
-  border: #39C8DF 3px solid;
+  border: var(--main-bg-color) 3px solid;
   margin: 0 auto;
   border-radius: 40px;
   margin-bottom: 5%;
@@ -332,7 +332,7 @@ animation: fade1 17s infinite; -webkit-animation: fade1 17s infinite;
 .person-container-text-img{
   display: grid;
   grid-template-columns: 40% auto ;
-  border: 3px solid #39C8DF ;
+  border: 3px solid var(--main-bg-color) ;
   box-shadow: 0px 0px  1px 0px #777777;
   border-radius: 40px;
   width:100%;
@@ -345,7 +345,7 @@ animation: fade1 17s infinite; -webkit-animation: fade1 17s infinite;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 40px;
-  box-shadow: 0px 0px 1px 2px #39C8DF;
+  box-shadow: 0px 0px 1px 2px var(--main-bg-color);
 }
 .person-container-text{
   display: grid;
@@ -367,7 +367,7 @@ animation: fade1 17s infinite; -webkit-animation: fade1 17s infinite;
    
   }
   .person-container-email{
-  color: #39C8DF;
+  color: var(--main-bg-color);
   text-decoration: none;
   }
 /* .persons > div:nth-child(even){
@@ -384,8 +384,8 @@ animation: fade1 17s infinite; -webkit-animation: fade1 17s infinite;
   animation-direction: alternate;
 }
 @keyframes person-attention {
-  from{box-shadow: 0px 0px 1px 1px #39C8DF}
-  to{box-shadow: 0px 0px 4px 8px #39C8DF}
+  from{box-shadow: 0px 0px 1px 1px var(--main-bg-color)}
+  to{box-shadow: 0px 0px 4px 8px var(--main-bg-color)}
 }
 /* OPROGRAMOWANIE........................................................ */
 .hardware-software{
@@ -405,7 +405,7 @@ animation: fade1 17s infinite; -webkit-animation: fade1 17s infinite;
 
 .narzedzia-link{
 text-decoration: none;
-color: #39C8DF;
+color: var(--main-bg-color);
 text-align: center;
 margin-bottom: 20px;
 }
@@ -423,7 +423,7 @@ margin-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr ;
   width: 100%;
-  border: 3px solid #39C8DF ;
+  border: 3px solid var(--main-bg-color) ;
   box-shadow: 1px 1px  5px 0px #777777;
   border-radius: 40px;
   margin-top: 5%;
@@ -438,7 +438,7 @@ margin-bottom: 20px;
   background-size: cover;
 /* border: 3px solid rgba(255, 166, 0, 0.788); */
   border-radius: 40px;
-  box-shadow: 0px 0px 1px 2px #39C8DF;
+  box-shadow: 0px 0px 1px 2px var(--main-bg-color);
 }
 .hardware-container-text{
   display: grid;
@@ -462,8 +462,8 @@ margin-bottom: 20px;
   animation-direction: alternate;
 }
 @keyframes person-attention {
-  from{box-shadow: 0px 0px 1px 1px #39C8DF}
-  to{box-shadow: 0px 0px 4px 8px #39C8DF}
+  from{box-shadow: 0px 0px 1px 1px var(--main-bg-color)}
+  to{box-shadow: 0px 0px 4px 8px var(--main-bg-color)}
 }
 /* Badania........................................................................ */
 .narzedzia{
@@ -493,7 +493,7 @@ margin-top: 2%;
 
 }
 .badania-more{
-color: #39C8DF;
+color: var(--main-bg-color);
 text-decoration: none;
 }
 .badania-more:hover{
@@ -501,7 +501,7 @@ text-decoration: none;
   text-decoration: none;
   }
 .badania-image{
-border: #39C8DF 2px solid;
+border: var(--main-bg-color) 2px solid;
 border-radius: 20px;
 background-position: center;
 background-repeat: no-repeat;
@@ -509,7 +509,7 @@ background-size: cover;
 height: 80%;
 }
 .badania-narzedzia-image{
-  border: #39C8DF 2px solid;
+  border: var(--main-bg-color) 2px solid;
   border-radius: 20px;
   background-position: center;
   background-repeat: no-repeat;
@@ -558,7 +558,7 @@ height: 80%;
   margin: 5%;
   padding: 3%;
   /* box-shadow: 2px  4px 4px #777777; */
-  border: 2px solid #39C8DF ;
+  border: 2px solid var(--main-bg-color) ;
   border-radius: 20px;
 }
 .news-card div,h4{
@@ -600,7 +600,7 @@ height: 80%;
   text-align: right;
   width: 100%;
   justify-items: center;
-  color: #39C8DF;
+  color: var(--main-bg-color);
   text-decoration: none;
   cursor: pointer;
   
@@ -622,7 +622,7 @@ width: 100%;
   width: 50%;
   }
   .news-back{
-    color: #39C8DF;
+    color: var(--main-bg-color);
     text-decoration: none;
     margin-right: 10%;
     width: 100%;
@@ -645,7 +645,7 @@ width: 100%;
   margin-bottom: 0;
   padding: 3%;
   /* box-shadow: 2px  4px 4px #777777; */
-  border: 2px solid #39C8DF ;
+  border: 2px solid var(--main-bg-color) ;
   border-radius: 20px;
   z-index: 0;
   justify-content: center;
@@ -656,9 +656,9 @@ width: 100%;
   width: 100%;
 }
 .announce-data{
-color: #39C8DF;
+color: var(--main-bg-color);
 justify-self: center;
-text-align: center;
+text-align: right;
 margin-top: 0;
 width: 100%;
 }
@@ -666,7 +666,7 @@ width: 100%;
   margin-top: 5%;
 }
 .announce-buttons-zapisz{
-  background-color: #39C8DF;
+  background-color: var(--main-bg-color);
   color: white;
   border-radius: 50px;
   padding: 10%;
@@ -689,7 +689,7 @@ width: 100%;
   width: 45%;
   padding: 3%;
   /* box-shadow: 2px  4px 4px #777777; */
-  border: 2px solid #39C8DF;
+  border: 2px solid var(--main-bg-color);
   border-top: none;
   border-radius: 4px;
     /* przesunięcie */
@@ -733,7 +733,7 @@ background-size: cover;
 }
 .contact-text{
   text-align: center;
-  background-color:#39C8DF ;
+  background-color:var(--main-bg-color) ;
   padding: 10%;
   width: 120%;
   height: 25vh;
@@ -757,7 +757,7 @@ iframe{
 .contact-form{
   display: grid;
   grid-template-columns: 1fr;
-  border: #39C8DF 2px solid;
+  border: var(--main-bg-color) 2px solid;
   padding: 2%;
   padding-top: 7%;
   border-radius: 20px;
@@ -768,7 +768,7 @@ iframe{
   
 }
 .contact-form input{
-  border: #39C8DF 2px solid;
+  border: var(--main-bg-color) 2px solid;
   border-radius: 10px;
   padding: 6px;
   margin: 0 auto;
@@ -777,10 +777,10 @@ iframe{
   
 }
 .contact-form input:focus{
-  box-shadow: inset 0 0 2px 2px #39C8DF;
+  box-shadow: inset 0 0 2px 2px var(--main-bg-color);
 }
 .contact-form textarea{
-  border: #39C8DF 2px solid;
+  border: var(--main-bg-color) 2px solid;
   border-radius: 10px;
   padding: 6px;
   height: 10vh;
@@ -788,11 +788,11 @@ iframe{
   width: 80%;
 }
 .contact-form button{
-  border: #39C8DF 2px solid;
+  border: var(--main-bg-color) 2px solid;
   border-radius: 10px;
   padding: 6px;
   width: 100px;
-  background-color: #39C8DF;
+  background-color: var(--main-bg-color);
   color: white;
   font-weight: bold;
   font-size: 16px;
@@ -801,13 +801,13 @@ iframe{
   margin: 0 auto;
 }
 .contact-form button:hover{
-  border: #39C8DF 2px solid;
+  border: var(--main-bg-color) 2px solid;
   box-shadow: #777777 0px 0px 5px 0px;
 }
 /* KALENDARZ........................................................................................ */
 iframe{
   width: 100%;
-  background-color:#39C8DF;
+  background-color:var(--main-bg-color);
 }
 .view-container-border {
   clear: right;
@@ -820,11 +820,11 @@ iframe{
 iframe {
   width: 80vw;
   height: 60vw;
-  background-color:#39C8DF;
+  background-color:var(--main-bg-color);
 }
 iframe body {
 
-  background-color:#39C8DF;
+  background-color:var(--main-bg-color);
 } 
 #container{
   width: 900px;
@@ -886,7 +886,7 @@ iframe body {
     display: block;
   }
   .nav-mobile-bar-delete{
-    color: #39C8DF;
+    color: var(--main-bg-color);
     cursor: pointer;
   }
   .nav-mobile-unactive{
@@ -898,7 +898,7 @@ iframe body {
     right: 0;
     top: 0;
     background-color: white;
-    border: #39C8DF 1px solid;
+    border: var(--main-bg-color) 1px solid;
     margin-left: 0;
     width: 30%;
     animation: navigation-bar 1s;
@@ -1034,7 +1034,7 @@ to{top:0}
     right: 0;
     top: 0;
     background-color: white;
-    border: #39C8DF 1px solid;
+    border: var(--main-bg-color) 1px solid;
     margin-left: 0;
     width: 100%;
     animation: navigation-bar 1s;

@@ -21,7 +21,8 @@ const SoftWarePage = () => {
           id
           description
           createdAt
-          
+          email
+          name
 
         }
       }
@@ -36,7 +37,7 @@ const SoftWarePage = () => {
             <div className="narzedzia">
               <div className="title-page-contener-hardware">
                 <div className="line-left"></div>
-                <div className="title-page">SOFTWARE</div>
+                <div className="title-page">Ogłoszenia</div>
                 <div className="line-right"></div>
               </div>
 
